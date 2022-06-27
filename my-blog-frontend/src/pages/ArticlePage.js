@@ -4,6 +4,7 @@ import articleContent from './article-content';
 import ArticlesList from '../components/ArticlesList';
 import CommentsList from '../components/CommentsList';
 import UpvotesSection from '../components/UpvotesSection';
+import AddCommentForm from '../components/AddCommentForm';
 import NotFoundPage from './NotFoundPage';
 
 
@@ -34,6 +35,7 @@ const ArticlePage = () => {
 				<p key={ key }>{ paragraph }</p>
 			))}
 			<CommentsList comments={ articleInfo.comments } />
+			<AddCommentForm articleName={ name } setArticleInfo={ setArticleInfo } />
 			<h3>Other Articles:</h3>
 			<ArticlesList articles={ otherArticles } />
 		</>
